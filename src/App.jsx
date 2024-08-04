@@ -35,12 +35,12 @@ function App() {
     // Cleanup subscription on unmount
     return () => unsubscribe();
   }, []);
-
+ const basname = "Khalidtaytay";
   return (
     <>
     <h1 className='warning'> This project is not yet supported on small devices, the version for small devices is coming soon </h1>
     <Context.Provider value = {{getImages , ImageList}}>
-    <Router>
+    <Router basename={basname}>
       <Routes>
       {userUid ? (
         <>
